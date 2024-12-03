@@ -1,0 +1,17 @@
+{
+    "exclude": ["node_modules"],
+    "compileOnSave": true,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "moduleResolution": "Node",
+        "target": "ESNext",
+        "module": "ESNext",
+        "baseUrl": "./src",
+        "paths": { "@/*": ["./*"] }
+    },
+    "include": ["./**/*.ts"]
+}

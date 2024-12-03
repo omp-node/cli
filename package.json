@@ -1,0 +1,33 @@
+{
+    "name": "omp-node-cli",
+    "description": "A CLI tool for open.mp to quickly create and initialize new projects with predefined templates and configurations.",
+    "version": "1.0.0",
+    "type": "module",
+    "keywords": [
+        "open.mp",
+        "omp-node",
+        "samp"
+    ],
+    "scripts": {
+        "dev": "rollup -c ./scripts/rollup.config.mjs -w",
+        "build": "rollup -c ./scripts/rollup.config.mjs",
+        "start": "node dist/index.js"
+    },
+    "devDependencies": {
+        "@rollup/plugin-json": "^6.1.0",
+        "@swc/helpers": "^0.5.15",
+        "@types/node": "^22.10.1",
+        "builtin-modules": "^4.0.0",
+        "colorette": "^2.0.20",
+        "fs-jetpack": "^5.1.0",
+        "inquirer": "^12.1.0",
+        "rollup": "^4.28.0",
+        "rollup-plugin-swc3": "^0.12.1",
+        "rollup-plugin-tsconfig-paths": "^1.5.2"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "printWidth": 120
+    },
+    "license": "ISC"
+}

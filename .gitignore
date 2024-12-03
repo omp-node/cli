@@ -1,0 +1,11 @@
+# Node.js dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Editor settings
+.vscode/
+
+# Logs
+*.log
