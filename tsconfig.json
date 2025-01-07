@@ -8,7 +8,7 @@
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
         "moduleResolution": "Node",
-        "target": "ESNext",
+        "target": "ES2020",
         "module": "ESNext",
         "baseUrl": "./src",
         "paths": { "@/*": ["./*"] }

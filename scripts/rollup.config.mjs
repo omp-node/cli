@@ -1,4 +1,6 @@
 import tsPaths from "rollup-plugin-tsconfig-paths";
+import resolve from "@rollup/plugin-node-resolve";
+import commonjs from "@rollup/plugin-commonjs";
 import builtinModules from "builtin-modules";
 import jsonPlugin from "@rollup/plugin-json";
 import { swc } from "rollup-plugin-swc3";
@@ -29,11 +31,13 @@ export default (() => {
         plugins: [
             tsPaths({ tsConfigPath }),
             jsonPlugin(),
+            resolve(),
+            commonjs(),
             swc({
                 tsconfig: tsConfigPath,
                 minify: true,
                 jsc: {
-                    target: "es2020",
+                    target: "es2019",
                     minify: true,
                     parser: {
                         syntax: "typescript",
