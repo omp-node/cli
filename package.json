@@ -1,6 +1,6 @@
 {
     "name": "@open.mp/cli",
-    "description": "A CLI tool for open.mp to quickly create and initialize new projects with predefined templates and configurations.",
+    "description": "A CLI tool for open.mp to quickly create and initialize new resources with predefined templates and configurations.",
     "version": "1.2.0",
     "type": "module",
     "bin": {
@@ -48,7 +48,8 @@
     },
     "license": "ISC",
     "dependencies": {
-        "@rollup/plugin-node-resolve": "^16.0.0"
+        "@rollup/plugin-node-resolve": "^16.0.0",
+        "yargs": "^17.7.2"
     },
     "private": false
 }

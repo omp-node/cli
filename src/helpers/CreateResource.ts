@@ -6,7 +6,7 @@ import { ICliOptions } from "@/types";
 import path from "node:path";
 import fs from "node:fs";
 
-export class Project {
+export class Resource {
     public static create(options: ICliOptions) {
         try {
             const { resourceName, template, usePaths } = options;
@@ -15,15 +15,15 @@ export class Project {
 
             this.validateResourceDirectory(resourceDirectory);
 
-            this.setupProjectStructure(resourceName, resourceDirectory, template, usePaths);
+            this.setupResourceStructure(resourceName, resourceDirectory, template, usePaths);
 
             this.installDependencies(resourceDirectory, template);
 
-            if (template === "ts") this.buildProject(resourceDirectory);
+            if (template === "ts") this.buildResource(resourceDirectory);
 
-            this.formatProject(resourceDirectory);
+            this.formatResource(resourceDirectory);
 
-            Logger("success", `Project ${greenBright(resourceName)} created at ${resourceDirectory}`);
+            Logger("success", `Resource ${greenBright(resourceName)} created at ${resourceDirectory}`);
             if (template === "ts") Logger("success", `Run ${greenBright("npm run dev")} to start in development mode`);
         } catch (error) {
             Logger("error", error instanceof Error ? error.message : String(error));
@@ -32,23 +32,23 @@ export class Project {
 
     private static validateResourceDirectory(directory: string) {
         if (fs.existsSync(directory)) {
-            throw new Error("Project already exists");
+            throw new Error("Resource already exists");
         }
     }
 
-    private static setupProjectStructure(
+    private static setupResourceStructure(
         resourceName: string,
         resourceDirectory: string,
         template: string,
         usePaths: boolean
     ) {
-        // Create basic project structure
+        // Create basic resource structure
         fs.mkdirSync(resourceDirectory, { recursive: true });
 
         // TypeScript-specific setup
         if (template === "ts") this.setupTypeScript(resourceDirectory, usePaths);
 
-        // Common project files
+        // Common resource files
         this.createPackageJson(resourceDirectory, template);
         this.createIndexScripts(resourceDirectory, template);
         this.createOmpNodeConfig(resourceName, resourceDirectory, template);
@@ -115,13 +115,13 @@ export class Project {
         }
     }
 
-    private static buildProject(resourceDirectory: string) {
-        Logger("success", "Building project...");
+    private static buildResource(resourceDirectory: string) {
+        Logger("success", "Building resource...");
         this.executeCommand("npm run build", resourceDirectory);
     }
 
-    private static formatProject(resourceDirectory: string) {
-        Logger("success", "Formatting project...");
+    private static formatResource(resourceDirectory: string) {
+        Logger("success", "Formatting resource...");
         this.executeCommand("npm run format", resourceDirectory);
     }
 

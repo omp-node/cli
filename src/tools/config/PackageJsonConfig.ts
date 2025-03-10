@@ -1,7 +1,7 @@
 export const pkgConfig = {
-    name: "omp-node-project",
+    name: "omp-node-resource",
     version: "1.0.0",
-    description: "omp-node project",
+    description: "omp-node resource",
     type: "module",
     scripts: {
         format: "prettier --write .",

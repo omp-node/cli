@@ -1,2 +1,2 @@
-export * from "./CreateProject";
+export * from "./CreateResource";
 export * from "./CreatePrompt";

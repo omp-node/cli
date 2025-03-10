@@ -2,5 +2,5 @@
 import { omp } from "@open.mp/node";
 
 omp.on("resourceStart", () => {
-    console.log("omp-node project started");
+    console.log("omp-node resource started");
 });
