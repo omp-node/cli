@@ -24,7 +24,7 @@ export class Resource {
             this.formatResource(resourceDirectory);
 
             Logger("success", `Resource ${greenBright(resourceName)} created at ${resourceDirectory}`);
-            if (template === "ts") Logger("success", `Run ${greenBright("npm run dev")} to start in development mode`);
+            if (template === "ts") Logger("success", `Run ${greenBright("npm run build")} to build your resource first when you make changes and *then* run open.mp`);
         } catch (error) {
             Logger("error", error instanceof Error ? error.message : String(error));
         }
