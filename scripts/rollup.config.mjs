@@ -26,6 +26,7 @@ export default (() => {
         output: {
             file: outputFile,
             format: "es",
+            banner: "#!/usr/bin/env node"
         },
 
         plugins: [
