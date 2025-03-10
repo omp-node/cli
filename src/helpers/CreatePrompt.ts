@@ -5,9 +5,9 @@ export async function createPromptUser(): Promise<ICliOptions> {
     const answers = await inquirer.prompt([
         {
             type: "input",
-            name: "projectName",
-            message: `Enter the project name:`,
-            default: "omp-node-project",
+            name: "resourceName",
+            message: `Enter the resource name:`,
+            default: "omp-node-resource",
         },
         {
             type: "list",

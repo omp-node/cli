@@ -1,18 +1,13 @@
-export const tsBaseConfig = {
-    exclude: ["node_modules", "resources", "scripts"],
+export const tsConfig = {
     compileOnSave: true,
     compilerOptions: {
-        target: "ES2020",
-        module: "ES2020",
+        target: "es2018",
+        module: "commonjs",
         moduleResolution: "Node",
         allowSyntheticDefaultImports: true,
         esModuleInterop: true,
-        baseUrl: ".",
-    },
-};
-export const tsConfig = {
-    extends: "../tsconfig.base.json",
-    compilerOptions: {
+        rootDir: "./",
+        outDir: "./resources",
         types: ["@types/node"],
         baseUrl: "./",
     },

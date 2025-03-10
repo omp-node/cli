@@ -1,7 +1,7 @@
 type IOptionTemplate = "js" | "ts";
 
 export interface ICliOptions {
-    projectName: string;
+    resourceName: string;
     template: IOptionTemplate;
     usePaths: boolean;
 }
