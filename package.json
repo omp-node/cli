@@ -2,6 +2,9 @@
     "name": "@open.mp/cli",
     "description": "A CLI tool for open.mp to quickly create and initialize new resources with predefined templates and configurations.",
     "version": "1.2.0",
+    "repository": "https://github.com/omp-node/cli",
+    "readme": "https://github.com/omp-node/cli/blob/master/README.md",
+    "bugs": "https://github.com/omp-node/cli/issues",
     "type": "module",
     "bin": {
         "omp-node": "./dist/index.js"
