@@ -104,7 +104,7 @@ export class Resource {
     private static installDependencies(resourceDirectory: string, template: string) {
         Logger("success", "Installing dependencies...");
 
-        const dependencies = ["@open.mp/node@latest", "prettier@latest"];
+        const dependencies = ["@omp-node/core@latest", "prettier@latest"];
         const devDependencies = template === "ts" ? devDepsConfig.split(" ") : [];
 
         this.executeCommand(`npm install ${dependencies.join(" ")}`, resourceDirectory);

@@ -1,5 +1,5 @@
 // @ts-ignore
-import { omp } from "@open.mp/node";
+import { omp } from "@omp-node/core";
 
 omp.on("resourceStart", () => {
     console.log("omp-node resource started");
