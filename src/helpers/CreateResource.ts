@@ -5,6 +5,7 @@ import { Logger } from "@/tools/Logger";
 import { ICliOptions } from "@/types";
 import path from "node:path";
 import fs from "node:fs";
+import { genericBoilerplateScript } from "@/templates";
 
 export class Resource {
     public static create(options: ICliOptions) {
@@ -91,8 +92,7 @@ export class Resource {
     }
 
     private static createIndexScripts(resourceDirectory: string, template: string) {
-        const scriptsPath = path.join(process.cwd(), "src", "templates", "Scripts.ts");
-        const scriptsContent = fs.readFileSync(scriptsPath, "utf-8").replace(/\/\/\s?@ts-ignore[^\n]*\n/g, "");
+        const scriptsContent = genericBoilerplateScript;
         const extension = template === "ts" ? "ts" : "js";
         fs.writeFileSync(path.join(resourceDirectory, `index.${extension}`), scriptsContent);
     }
