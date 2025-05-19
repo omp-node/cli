@@ -4,7 +4,7 @@ import { createPromptUser, Resource } from "./helpers";
 import { buildResources } from "./helpers/BuildResources";
 
 yargs(hideBin(process.argv))
-    .scriptName("omp-node")
+    .scriptName("@omp-node/cli")
     .usage("Usage: $0 <command> [options]")
     .command(
         "add",

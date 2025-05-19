@@ -1,6 +1,6 @@
-# @open.mp/cli
+# @omp-node/cli
 
-`@open.mp/cli` is a command-line interface (CLI) tool for quickly creating and managing resources in your `omp-node` project. It allows you to scaffold new resources and build resources located in the `resources` folder.
+`@omp-node/cli` is a command-line interface (CLI) tool for quickly creating and managing resources in your `omp-node` project. It allows you to scaffold new resources and build resources located in the `resources` folder.
 
 ## Installation
 
@@ -11,13 +11,13 @@ You can install the CLI globally or run it directly using `npx`.
 To run the CLI tool with `npx`, you can execute the following commands:
 
 ```sh
-npx omp-node <command> [options]
+npx @omp-node/cli <command> [options]
 ```
 
 ```sh
 Commands:
-  omp-node add    Create and initialize a new resource for omp-node component
-  omp-node build  Iterate through all folders in the 'resources' directory and
+  @omp-node/cli add    Create and initialize a new resource for omp-node component
+  @omp-node/cli build  Iterate through all folders in the 'resources' directory and
                   run 'npm run build' in each
 
 Options:
@@ -27,16 +27,16 @@ Options:
 
 ### Global Installation (Not necessary, you can just keep using NPX to always have updated package)
 
-To install `@open.mp/cli` globally, run:
+To install `@omp-node/cli` globally, run:
 
 ```sh
-npm install -g @open.mp/cli
+npm install -g @omp-node/cli
 ```
 
 Then, you can run it directly:
 
 ```sh
-omp-node <command> [options]
+@omp-node/cli <command> [options]
 ```
 
 ## Commands
@@ -48,7 +48,7 @@ Creates a new resource/package in the `omp-node` project.
 **Usage**:
 
 ```sh
-omp-node add
+@omp-node/cli add
 ```
 
 This command will prompt you to select a project template and provide configuration options to create a new resource.
@@ -60,7 +60,7 @@ Iterates through all folders in the `resources` directory and runs `npm run buil
 **Usage**:
 
 ```sh
-omp-node build
+@omp-node/cli build
 ```
 
 This command will start the build process for each resource in the `resources` folder, displaying colorful output for each directory processed.
